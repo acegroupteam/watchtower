@@ -1,6 +1,6 @@
 ## spring-boot-easyprofiler-starter
 
-###### 一个方便，轻量级，无侵入的springboot项目web接口访问监控插件,默认情况下无须任何配置，只须添加maven依赖
+###### 一个方便轻量级，无侵入的springboot项目web接口访问监控插件,默认情况下无须任何配置，只须添加maven依赖
 
 
 ### 第一步: 由于还没上传到中央仓库，需要克隆项目到本地
@@ -70,7 +70,7 @@ easy-profiler:
  #### 注:以上参数都是可选配置
  
 
-#### 欢迎star,使用过程中如有任何疑问，欢迎联系本人
+#### 欢迎fork,star,使用过程中如有任何疑问，欢迎联系本人
  ##### email:xiangtaohe@gmail.com
  ##### qq:798395170
 
