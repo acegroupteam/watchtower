@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.easy-profiler</groupId>
-    <artifactId>spring-boot-easy-profiler-starter</artifactId>
+    <groupId>io.github.easyprofiler</groupId>
+    <artifactId>spring-boot-easyprofiler-starter</artifactId>
     <version>1.0.1.RELEASE</version>
     <packaging>jar</packaging>
 
 
-    <name>easy-profiler</name>
+    <name>easyprofiler</name>
     <url>https://github.com/hexiangtao/easy-profiler.git</url>
     <description>一个简单的接口访问统计springboot插件</description>
 

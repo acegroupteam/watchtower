@@ -17,8 +17,8 @@ mvn  install
 ### 第三步，在你的项目添加如下依赖
 ```xml
 <dependency>
-    <groupId>io.github.easy-profiler</groupId>
-    <artifactId>spring-boot-easy-profiler-starter</artifactId>
+    <groupId>io.github.easyprofiler</groupId>
+    <artifactId>spring-boot-easyprofiler-starter</artifactId>
     <version>1.0.1.RELEASE</version>
 </dependency>
 
