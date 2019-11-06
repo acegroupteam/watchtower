@@ -1,0 +1,40 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "io.github.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties",
+      "name": "easy-profiler",
+      "type": "io.github.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties"
+    },
+    {
+      "sourceType": "io.github.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties",
+      "name": "easy-profiler.enableBasic",
+      "sourceMethod": "isEnableBasic()",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "io.github.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties",
+      "name": "easy-profiler.username",
+      "sourceMethod": "getUsername()",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "io.github.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties",
+      "name": "easy-profiler.password",
+      "sourceMethod": "getPassword()",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "io.github.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties",
+      "name": "easy-profiler.basePackage",
+      "sourceMethod": "getBasePackage()",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "io.github.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties",
+      "name": "easy-profiler.excludeClass",
+      "sourceMethod": "getExcludeClass()",
+      "type": "java.lang.String"
+    }
+  ]
+}
