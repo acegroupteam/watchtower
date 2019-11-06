@@ -11,7 +11,7 @@
 #### 第一步 添加如下依赖
 ```xml
 <dependency>
-    <groupId>io.github.hexiangtao</groupId>
+    <groupId>com.github.hexiangtao</groupId>
     <artifactId>spring-boot-easyprofiler-starter</artifactId>
     <version>0.0.1.RELEASE</version>
 </dependency>
