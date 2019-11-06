@@ -1,5 +1,7 @@
 ## spring-boot-easyprofiler-starter
-一个简单的统计springmvc web口的工具,默认情况下无须任何配置，只须添加maven依赖
+
+###### 一个方便，轻量级，无侵入的springboot项目web接口访问监控插件,默认情况下无须任何配置，只须添加maven依赖
+
 
 ### 第一步: 由于还没上传到中央仓库，需要克隆项目到本地
 ```bash
@@ -39,8 +41,13 @@ http://localhost:8080/easy-profiler
 ```
 
 
-### 自定义配置:
+### 自定义配置说明:
+  
+在spring-boot项目的配置文件(例如:application-dev.yml)里键入eas,会有如下提示:
+  
 ![img](https://github.com/hexiangtao/configuration/blob/master/20191106135024.png)
+
+#### 完整的配置项如下:
 ```yaml
 easy-profiler:
   enabled: false
@@ -52,27 +59,23 @@ easy-profiler:
 
 ```
 
-#### 配置参数说明:
-  1.  enabled:  是否启用接口统计，默认为true,如果不想启用，设置为false
+#### 配置项说明:
+  1.  enabled:  是否启用，默认为true,如果不想启用，设置为false
   2.  username: 统计页登陆名  
   3.  password: 统计页密码
   4.  enable-basic: 访问统计页是否需要授权，默认true,如果希望任何人都能访问，设置为false
   5.  base-package:  controller所在包路径，可选
   6.  exclude-class: 忽略异常类.例如某些业务异常不想被统计到失败数里面，则可以在这里配置
  
- #### 以上参数都是可选配置
+ #### 注:以上参数都是可选配置
  
  
   
 
 
 #### 如有疑问，欢迎联系本人
-
-```html
- email:xiangtaohe@gmail.com
- 
- qq:798395170
-```
+ ##### email:xiangtaohe@gmail.com
+ ##### qq:798395170
 
 
 
