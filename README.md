@@ -3,28 +3,19 @@
 ###### 一个方便轻量级，无侵入的springboot项目web接口访问监控插件,默认情况下无须任何配置，只须添加maven依赖
 
 
-### 第一步: 由于还没上传到中央仓库，需要克隆项目到本地
-```bash
- git clone https://github.com/hexiangtao/spring-boot-easyprofiler-starter.git
-```
-
-### 第二步: 构建项目，部署到本地仓库
-```bash
-mvn  install
-```  
 
 
-### 第三步，在你的项目添加如下依赖
+### 第一步 添加如下依赖
 ```xml
 <dependency>
-    <groupId>io.github.easyprofiler</groupId>
+    <groupId>io.github.hexiangtao</groupId>
     <artifactId>spring-boot-easyprofiler-starter</artifactId>
-    <version>1.0.1.RELEASE</version>
+    <version>0.0.1.RELEASE</version>
 </dependency>
 
 ```
 
-### 第四步： 启动你web项目  访问统计页路径: /easy-profiler.例如
+###第二步:启动你web项目  访问统计页路径: /easy-profiler.例如
 ```bash
 http://localhost:8080/easy-profiler
 ```
