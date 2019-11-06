@@ -1,7 +1,7 @@
 ## spring-boot-easyprofiler-starter
 一个简单的统计springmvc web口的工具,默认情况下无须任何配置，只须添加maven依赖
 
-### 第一步: 克隆项目到本地
+### 第一步: 由于还没上传到中央仓库，需要克隆项目到本地
 ```bash
  git clone https://github.com/hexiangtao/spring-boot-easyprofiler-starter.git
 ```
@@ -22,10 +22,46 @@ mvn  install
 
 ```
 
-### 第四步： 启动你web项目  访问统计页路径: /profiler,例如
+### 第四步： 启动你web项目  访问统计页路径: /easy-profiler.例如
 ```bash
-http://localhost:8080/profiler
+http://localhost:8080/easy-profiler
+```
+>  tip:第一次访问会要求输入用户名密码，默认用户密码是profiler,profiler,该值可以在配置文件里覆盖
+
+会看到接口每次调用的统计数据,例如:
+![img](https://github.com/hexiangtao/configuration/blob/master/20191106133718.png)
+
+
+
+### 自定义配置:
+![img](https://github.com/hexiangtao/configuration/blob/master/20191106135024.png)
+```yaml
+easy-profiler:
+  enabled: false
+  password: test
+  username: test
+  enable-basic: true
+  base-package: com.example
+  exclude-class: BizException
+
 ```
 
- 会显示如下内容
- ![img](https://github.com/hexiangtao/configuration/blob/master/20191106133718.png)
+#### 配置参数说明:
+  1.  enabled:  是否启用接口统计，默认为true,如果不想启用，设置为false
+  2.  username: 统计页登陆名  
+  3.  password: 统计页密码
+  4.  enable-basic: 访问统计页是否需要授权，默认true,如果希望任何人都能访问，设置为false
+  5.  base-package:  controller所在包路径，可选
+  6.  exclude-class: 忽略异常类.例如某些业务异常不想被统计到失败数里面，则可以在这里配置
+ 
+ 以上参数都是可选配置
+ 
+ 
+  
+
+
+
+
+
+
+
