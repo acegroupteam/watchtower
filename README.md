@@ -1,5 +1,8 @@
 ## spring-boot-easyprofiler-starter
-一个简单的统计springmvc web口的工具,默认情况下无须任何配置，只须添加maven依赖
+一个简单的统计springmvc web口的工具,默认情况下无须任何配置，只须添加maven依赖,统计项：
+```bash
+路径	失败数	成功数	总数	平均ms	最大ms	最小ms	最大ms时间点	累计成功数	累计失败数	累计调用数	历史平均ms	历史最小ms	历史最大ms	历史最大ms时间点
+```
 
 ### 第一步: 由于还没上传到中央仓库，需要克隆项目到本地
 ```bash
@@ -60,7 +63,12 @@ easy-profiler:
   
 
 
-
+####　　如有疑问，欢迎联系本人
+```html
+ email:xiangtaohe@gmail.com
+ 
+ qq:798395170
+```
 
 
 
