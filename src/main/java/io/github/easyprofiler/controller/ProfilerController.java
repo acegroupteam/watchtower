@@ -21,7 +21,7 @@ import java.util.Map;
 @Profiler(false)
 public class ProfilerController {
 
-    public static final String DEFAULT_URL = "/easy-profiler";
+    public static final String DEFAULT_URL = "/profiler";
 
 
     private EasyProfilerConfigurationProperties properties;
@@ -31,7 +31,7 @@ public class ProfilerController {
         this.properties = properties;
     }
 
-    @RequestMapping(value = DEFAULT_URL)
+    @RequestMapping(value = DEFAULT_URL, produces = "text/html")
     public void profile(HttpServletRequest request, HttpServletResponse response) {
         boolean enableBasic = properties.isEnableBasic();
         if (!enableBasic) {
