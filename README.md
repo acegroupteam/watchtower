@@ -1,14 +1,14 @@
 ## spring-boot-easyprofiler-starter
 
-#### 统计每个接口的平均调用长时，最大时长，最小时长，处理处理中请求数，失败请求数，成功请求数，慢事务排查一目了然。
+##### 统计每个接口的平均调用长时，最大时长，最小时长，处理处理中请求数，失败请求数，成功请求数，慢事务排查一目了然。
 
 
 
----
 
-#### 使用方式
 
-### 第一步 添加如下依赖
+### 使用方式:
+
+#### 第一步 添加如下依赖
 ```xml
 <dependency>
     <groupId>io.github.hexiangtao</groupId>
@@ -18,7 +18,7 @@
 
 ```
 
-### 第二步:启动你web项目  访问统计页路径: /easy-profiler.例如
+#### 第二步:启动你web项目  访问统计页路径: /easy-profiler.例如
 ```bash
 http://localhost:8080/easy-profiler
 ```
@@ -28,14 +28,14 @@ http://localhost:8080/easy-profiler
 ![img](https://github.com/hexiangtao/configuration/blob/master/20191106133718.png)
 
 
-### 统计项：
+#### 统计项：
 
 ```bash
 路径	失败数	成功数	总数	平均ms	最大ms	最小ms	最大ms时间点	累计成功数	累计失败数	累计调用数	历史平均ms	历史最小ms	历史最大ms	历史最大ms时间点
 ```
 
 
-### 自定义配置说明:
+#### 自定义配置说明:
   
 在spring-boot项目的配置文件(例如:application-dev.yml)里键入eas,会有如下提示:
   
