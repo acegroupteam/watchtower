@@ -44,11 +44,11 @@ http://localhost:8080/easy-profiler
 #### 完整的配置项如下:
 ```yaml
 easy-profiler:
-  enabled: false
-  password: test
-  username: test
+  enabled: true
+  password: profiler
+  username: profiler
   enable-basic: true
-  base-package: com.example
+  base-package: com.example.controller
   exclude-class: BizException
 
 ```
