@@ -15,7 +15,7 @@
 
 ```
 
-###第二步:启动你web项目  访问统计页路径: /easy-profiler.例如
+### 第二步:启动你web项目  访问统计页路径: /easy-profiler.例如
 ```bash
 http://localhost:8080/easy-profiler
 ```
