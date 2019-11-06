@@ -54,7 +54,7 @@ easy-profiler:
   5.  base-package:  controller所在包路径，可选
   6.  exclude-class: 忽略异常类.例如某些业务异常不想被统计到失败数里面，则可以在这里配置
  
- 以上参数都是可选配置
+ #### 以上参数都是可选配置
  
  
   
