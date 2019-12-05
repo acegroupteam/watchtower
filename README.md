@@ -8,7 +8,7 @@
 
 ### 使用方式:
 
-#### 第一步 添加如下依赖
+#### 第一步 添加如下依赖(已上传到中央仓库)
 ```xml
 <dependency>
     <groupId>com.github.hexiangtao</groupId>
