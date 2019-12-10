@@ -19,7 +19,7 @@
 ```
 
 #### 第二步:启动你web项目  访问统计页路径: /easy-profiler.例如
-```url
+```http
 http://localhost:8080/easy-profiler
 ```
 >  tip:第一次访问会要求输入用户名密码，默认用户密码是profiler,profiler,该值可以在配置文件里覆盖
