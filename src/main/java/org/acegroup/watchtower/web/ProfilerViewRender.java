@@ -1,8 +1,8 @@
-package io.github.easyprofiler;
+package org.acegroup.watchtower.web;
 
-import io.github.easyprofiler.model.MethodAccessInfo;
-import io.github.easyprofiler.util.NetUtil;
-import io.github.easyprofiler.util.ProfileInfoHolder;
+import org.acegroup.watchtower.web.model.MethodAccessInfo;
+import org.acegroup.watchtower.web.util.NetUtil;
+import org.acegroup.watchtower.web.util.ProfileInfoHolder;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadInfo;

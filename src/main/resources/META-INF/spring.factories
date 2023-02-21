@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-io.github.easyprofiler.autoconfigure.EasyProfilerAutoConfiguration
+org.acegroup.watchtower.web.autoconfigure.EasyProfilerAutoConfiguration

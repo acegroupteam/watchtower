@@ -1,4 +1,4 @@
-package io.github.easyprofiler.util;
+package org.acegroup.watchtower.web.util;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;

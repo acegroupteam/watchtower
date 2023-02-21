@@ -1,6 +1,6 @@
-package io.github.easyprofiler.annotation;
+package org.acegroup.watchtower.web.annotation;
 
-import io.github.easyprofiler.autoconfigure.EasyProfilerAutoConfiguration;
+import org.acegroup.watchtower.web.autoconfigure.EasyProfilerAutoConfiguration;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.Retention;

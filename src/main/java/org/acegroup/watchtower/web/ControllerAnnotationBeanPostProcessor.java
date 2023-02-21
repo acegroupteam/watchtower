@@ -1,11 +1,11 @@
-package io.github.easyprofiler;
+package org.acegroup.watchtower.web;
 
-import io.github.easyprofiler.annotation.Profiler;
-import io.github.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties;
-import io.github.easyprofiler.controller.ProfilerController;
-import io.github.easyprofiler.model.Profile;
-import io.github.easyprofiler.util.ProfileInfoHolder;
-import io.github.easyprofiler.util.ProfilerQueue;
+import org.acegroup.watchtower.web.annotation.Profiler;
+import org.acegroup.watchtower.web.autoconfigure.EasyProfilerConfigurationProperties;
+import org.acegroup.watchtower.web.controller.ProfilerController;
+import org.acegroup.watchtower.web.model.Profile;
+import org.acegroup.watchtower.web.util.ProfileInfoHolder;
+import org.acegroup.watchtower.web.util.ProfilerQueue;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.springframework.aop.framework.ProxyFactory;

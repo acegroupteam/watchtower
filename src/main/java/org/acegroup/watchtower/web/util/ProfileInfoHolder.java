@@ -1,8 +1,9 @@
-package io.github.easyprofiler.util;
+package org.acegroup.watchtower.web.util;
 
-import io.github.easyprofiler.model.ControllerAccessInfo;
-import io.github.easyprofiler.model.MethodAccessInfo;
-import io.github.easyprofiler.model.Profile;
+
+import org.acegroup.watchtower.web.model.ControllerAccessInfo;
+import org.acegroup.watchtower.web.model.MethodAccessInfo;
+import org.acegroup.watchtower.web.model.Profile;
 
 import java.lang.reflect.Method;
 import java.time.LocalDate;

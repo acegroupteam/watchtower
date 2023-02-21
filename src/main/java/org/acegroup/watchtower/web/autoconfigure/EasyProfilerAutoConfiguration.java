@@ -1,8 +1,8 @@
-package io.github.easyprofiler.autoconfigure;
+package org.acegroup.watchtower.web.autoconfigure;
 
-import io.github.easyprofiler.ControllerAnnotationBeanPostProcessor;
-import io.github.easyprofiler.controller.ProfilerController;
-import io.github.easyprofiler.util.EasyProfilerUtil;
+import org.acegroup.watchtower.web.ControllerAnnotationBeanPostProcessor;
+import org.acegroup.watchtower.web.controller.ProfilerController;
+import org.acegroup.watchtower.web.util.EasyProfilerUtil;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

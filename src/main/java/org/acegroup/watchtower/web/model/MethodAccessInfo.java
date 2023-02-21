@@ -1,9 +1,13 @@
-package io.github.easyprofiler.model;
+package org.acegroup.watchtower.web.model;
 
 import java.time.LocalDateTime;
 
-
+/**
+ * @author hexiangtao
+ * @date 2023/2/21 12:25
+ */
 public class MethodAccessInfo {
+
     private String method;
     private String uri;
 
@@ -211,5 +215,4 @@ public class MethodAccessInfo {
     public LocalDateTime getLastInvokeAt() {
         return lastInvokeAt;
     }
-
 }

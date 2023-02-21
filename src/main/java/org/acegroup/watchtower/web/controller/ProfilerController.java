@@ -1,10 +1,10 @@
-package io.github.easyprofiler.controller;
+package org.acegroup.watchtower.web.controller;
 
-import io.github.easyprofiler.ProfilerViewRender;
-import io.github.easyprofiler.annotation.Profiler;
-import io.github.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties;
-import io.github.easyprofiler.model.MethodAccessInfo;
-import io.github.easyprofiler.util.ProfileInfoHolder;
+import org.acegroup.watchtower.web.ProfilerViewRender;
+import org.acegroup.watchtower.web.annotation.Profiler;
+import org.acegroup.watchtower.web.autoconfigure.EasyProfilerConfigurationProperties;
+import org.acegroup.watchtower.web.model.MethodAccessInfo;
+import org.acegroup.watchtower.web.util.ProfileInfoHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

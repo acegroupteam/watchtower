@@ -1,4 +1,4 @@
-package io.github.easyprofiler.annotation;
+package org.acegroup.watchtower.web.annotation;
 
 import org.springframework.core.annotation.AliasFor;
 

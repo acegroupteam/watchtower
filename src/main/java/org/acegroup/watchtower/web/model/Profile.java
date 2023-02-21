@@ -1,7 +1,11 @@
-package io.github.easyprofiler.model;
+package org.acegroup.watchtower.web.model;
 
 import java.lang.reflect.Method;
 
+/**
+ * @author hexiangtao
+ * @date 2023/2/21 12:27
+ */
 
 public class Profile {
 

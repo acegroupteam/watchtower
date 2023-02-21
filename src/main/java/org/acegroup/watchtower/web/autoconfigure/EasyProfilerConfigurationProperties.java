@@ -1,6 +1,6 @@
-package io.github.easyprofiler.autoconfigure;
+package org.acegroup.watchtower.web.autoconfigure;
 
-import io.github.easyprofiler.util.EasyProfilerUtil;
+import org.acegroup.watchtower.web.util.EasyProfilerUtil;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 

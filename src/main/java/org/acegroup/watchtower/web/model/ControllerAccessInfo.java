@@ -1,8 +1,11 @@
-package io.github.easyprofiler.model;
+package org.acegroup.watchtower.web.model;
 
 import java.util.List;
 
-
+/**
+ * @author hexiangtao
+ * @date 2023/2/21 12:25
+ */
 public class ControllerAccessInfo {
     private Class<?> clazz;
     private List<MethodAccessInfo> methods;

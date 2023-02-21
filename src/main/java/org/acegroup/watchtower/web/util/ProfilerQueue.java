@@ -1,6 +1,6 @@
-package io.github.easyprofiler.util;
+package org.acegroup.watchtower.web.util;
 
-import io.github.easyprofiler.model.Profile;
+import org.acegroup.watchtower.web.model.Profile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
