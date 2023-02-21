@@ -47,8 +47,8 @@ public class ProfilerQueue {
                 try {
                     Profile req = queue.take();
                     ProfileInfoHolder.addProfilerInfo(req);
-                } catch (Exception e) {
-                    e.printStackTrace();
+                } catch (Exception ex) {
+                    log.error("start failed",ex);
                 }
             }
         });

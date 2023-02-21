@@ -66,11 +66,11 @@ public class ProfilerController {
     private void renderView(HttpServletResponse response, Map<String, List<MethodAccessInfo>> controllerAccessInfo) {
         StringBuilder sb = new StringBuilder(2000);
         sb.append("<html><head> <meta http-equiv=\"refresh\" content=\"15\">\r\n<style type='text/css'>table tr:nth-child(odd) {background-color:#F5F5F5;}\r\ntable tr:nth-child(even) {background-color:#fff;}</style></head><body style='font-size: 12px;font-family:Microsoft YaHei;color:rgb(33, 48, 93);background:#FFF'>");
-        sb.append("<div style='padding:17px 4px;;font-size:16px;border-bottom:1px solid #999;'>" + ProfilerViewRender.statsRequest() + ProfilerViewRender.statsThread() + "</div>");
+        sb.append("<div style='padding:17px 4px;;font-size:16px;border-bottom:1px solid #999;'>").append(ProfilerViewRender.statsRequest()).append(ProfilerViewRender.statsThread()).append("</div>");
         sb.append("<table style='margin-top:20px;text-align: left;width:100%;margin:5px;' border='0' cellspacing='0' cellpadding='0'>");
         sb.append("<tr style='height:40px;'>" + ProfilerViewRender.headerColumns + "</tr>");
         List<MethodAccessInfo> rows = new ArrayList<>(100);
-        controllerAccessInfo.entrySet().stream().map(o -> o.getValue()).forEach(o -> rows.addAll(o));
+        controllerAccessInfo.values().forEach(rows::addAll);
         for (int i = 0; i < rows.size(); i++) {
             sb.append(ProfilerViewRender.createTr(rows.get(i)));
         }

@@ -77,7 +77,7 @@ public class ControllerAnnotationBeanPostProcessor implements BeanPostProcessor 
             if (restController != null) {
                 uri = restController.value()[0];
             }
-            ProfileInfoHolder.processingCount.incrementAndGet();
+            ProfileInfoHolder.PROCESSING_COUNT.incrementAndGet();
             uri += requestMappingAnnotation.value()[0];
             startAt = System.currentTimeMillis();
             Object result = method.invoke(bean, invocation.getArguments());
@@ -89,11 +89,11 @@ public class ControllerAnnotationBeanPostProcessor implements BeanPostProcessor 
             if (properties.getExcludeClass() != null && !(cause.getClass().getName().equals(properties.getExcludeClass()))) {
                 invokeSuccess = false;
             } else {
-                ProfileInfoHolder.bizExCount.incrementAndGet();
+                ProfileInfoHolder.BIZ_EX_COUNT.incrementAndGet();
             }
             throw cause;
         } finally {
-            ProfileInfoHolder.processingCount.decrementAndGet();
+            ProfileInfoHolder.PROCESSING_COUNT.decrementAndGet();
             saveInvokeInfo(startAt, endAt, uri, bean.getClass(), method, invokeSuccess);
 
         }

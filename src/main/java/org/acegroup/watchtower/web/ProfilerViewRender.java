@@ -29,7 +29,7 @@ public class ProfilerViewRender {
 
 
     public static String statsRequest() {
-        return String.format(titleTpl, formatDateTime(ProfileInfoHolder.getStartTime()), NetUtil.getLocalhostStr(), ProfileInfoHolder.processingCount.get(), ProfileInfoHolder.successCount.get(), ProfileInfoHolder.failedCount.get(), ProfileInfoHolder.bizExCount.get());
+        return String.format(titleTpl, formatDateTime(ProfileInfoHolder.getStartTime()), NetUtil.getLocalhostStr(), ProfileInfoHolder.PROCESSING_COUNT.get(), ProfileInfoHolder.SUCCESS_COUNT.get(), ProfileInfoHolder.FAILED_COUNT.get(), ProfileInfoHolder.BIZ_EX_COUNT.get());
     }
 
     public static String createTr(MethodAccessInfo ma) {
@@ -39,7 +39,7 @@ public class ProfilerViewRender {
 
         StringBuilder sb = new StringBuilder(1000);
         String bgColor = ma.getLastDayErrorCount() > MAX_ERROR_COUNT || ma.getLastDayAvgMills() > MAX_MILLS ? "background-color:" + COLOR_WARN + ";" : "";
-        sb.append("<tr style='height:40px;" + bgColor + "'>");
+        sb.append("<tr style='height:40px;").append(bgColor).append("'>");
         sb.append(s1);
         sb.append(s2);
         sb.append("</tr>");
@@ -50,12 +50,12 @@ public class ProfilerViewRender {
 
     public static String createTd(Object... columns) {
         StringBuilder buf = new StringBuilder();
-        Arrays.asList(columns).stream().forEach(colItem -> {
+        Arrays.stream(columns).forEach(colItem -> {
             if (colItem instanceof LocalDateTime) {
                 LocalDateTime dt = (LocalDateTime) colItem;
                 colItem = formatDateTime(dt);
             }
-            buf.append("<td style='padding:3px;'>" + colItem + "</td>");
+            buf.append("<td style='padding:3px;'>").append(colItem).append("</td>");
         });
 
 

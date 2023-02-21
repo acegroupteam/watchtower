@@ -18,15 +18,15 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class ProfileInfoHolder {
 
-    private static ConcurrentHashMap<Class<?>, ControllerAccessInfo> map = new ConcurrentHashMap<>();
+    private static final ConcurrentHashMap<Class<?>, ControllerAccessInfo> CONCURRENT_HASH_MAP = new ConcurrentHashMap<>();
 
     private static LocalDateTime startTime;
 
 
-    public static final AtomicLong processingCount = new AtomicLong(0);
-    public static final AtomicLong failedCount = new AtomicLong(0);
-    public static final AtomicLong bizExCount = new AtomicLong(0);
-    public static final AtomicLong successCount = new AtomicLong(0);
+    public static final AtomicLong PROCESSING_COUNT = new AtomicLong(0);
+    public static final AtomicLong FAILED_COUNT = new AtomicLong(0);
+    public static final AtomicLong BIZ_EX_COUNT = new AtomicLong(0);
+    public static final AtomicLong SUCCESS_COUNT = new AtomicLong(0);
 
 
     public static synchronized void setStartTime(LocalDateTime st) {
@@ -42,9 +42,9 @@ public class ProfileInfoHolder {
             return;
         }
         if (profileInfo.isSuccess()) {
-            successCount.incrementAndGet();
+            SUCCESS_COUNT.incrementAndGet();
         } else {
-            failedCount.incrementAndGet();
+            FAILED_COUNT.incrementAndGet();
         }
 
         Class<?> controllerClazz = profileInfo.getClazz();
@@ -62,11 +62,11 @@ public class ProfileInfoHolder {
 
 
     private static ControllerAccessInfo findByClass(Class controllerClazz) {
-        ControllerAccessInfo cai = map.get(controllerClazz);
+        ControllerAccessInfo cai = CONCURRENT_HASH_MAP.get(controllerClazz);
         if (cai == null) {
             cai = new ControllerAccessInfo();
             cai.setClazz(controllerClazz);
-            map.putIfAbsent(controllerClazz, cai);
+            CONCURRENT_HASH_MAP.putIfAbsent(controllerClazz, cai);
         }
         return cai;
     }
@@ -91,7 +91,7 @@ public class ProfileInfoHolder {
 
     public static Map<String, List<MethodAccessInfo>> getAllAccessInfo() {
         Map<String, List<MethodAccessInfo>> result = new HashMap<>();
-        for (Map.Entry<Class<?>, ControllerAccessInfo> entry : map.entrySet()) {
+        for (Map.Entry<Class<?>, ControllerAccessInfo> entry : CONCURRENT_HASH_MAP.entrySet()) {
             ControllerAccessInfo cai = entry.getValue();
             result.put(cai.getClazz().getSimpleName(), cai.getMethods());
         }
@@ -103,7 +103,7 @@ public class ProfileInfoHolder {
 
 
         long useTime = profileInfo.getEndTime() - profileInfo.getStartTime();
-        boolean occurError = profileInfo.isSuccess() == false;
+        boolean occurError = !profileInfo.isSuccess();
         LocalDateTime lastInvokeTime = mai.getLastInvokeAt();
         LocalDate now = LocalDate.now();
 

@@ -23,7 +23,7 @@ public class NetUtil {
                 iface = ifaces.nextElement();
                 for (Enumeration<InetAddress> inetAddrs = iface.getInetAddresses(); inetAddrs.hasMoreElements();) {
                     inetAddr = inetAddrs.nextElement();
-                    if (false == inetAddr.isLoopbackAddress()) {
+                    if (!inetAddr.isLoopbackAddress()) {
                         if (inetAddr.isSiteLocalAddress()) {
                             return inetAddr;
                         } else if (null == candidateAddress) {
