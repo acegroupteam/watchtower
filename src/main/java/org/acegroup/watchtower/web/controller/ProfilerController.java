@@ -5,6 +5,8 @@ import org.acegroup.watchtower.web.annotation.Profiler;
 import org.acegroup.watchtower.web.autoconfigure.EasyProfilerConfigurationProperties;
 import org.acegroup.watchtower.web.model.MethodAccessInfo;
 import org.acegroup.watchtower.web.util.ProfileInfoHolder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -20,6 +22,8 @@ import java.util.Map;
 @Controller
 @Profiler(false)
 public class ProfilerController {
+
+    private static final Logger logger = LoggerFactory.getLogger(ProfilerController.class);
 
     public static final String DEFAULT_URL = "/profiler";
 
@@ -68,7 +72,7 @@ public class ProfilerController {
         sb.append("<html><head> <meta http-equiv=\"refresh\" content=\"15\">\r\n<style type='text/css'>table tr:nth-child(odd) {background-color:#F5F5F5;}\r\ntable tr:nth-child(even) {background-color:#fff;}</style></head><body style='font-size: 12px;font-family:Microsoft YaHei;color:rgb(33, 48, 93);background:#FFF'>");
         sb.append("<div style='padding:17px 4px;;font-size:16px;border-bottom:1px solid #999;'>").append(ProfilerViewRender.statsRequest()).append(ProfilerViewRender.statsThread()).append("</div>");
         sb.append("<table style='margin-top:20px;text-align: left;width:100%;margin:5px;' border='0' cellspacing='0' cellpadding='0'>");
-        sb.append("<tr style='height:40px;'>" + ProfilerViewRender.headerColumns + "</tr>");
+        sb.append("<tr style='height:40px;'>").append(ProfilerViewRender.headerColumns).append("</tr>");
         List<MethodAccessInfo> rows = new ArrayList<>(100);
         controllerAccessInfo.values().forEach(rows::addAll);
         for (int i = 0; i < rows.size(); i++) {
@@ -78,8 +82,8 @@ public class ProfilerController {
         response.setContentType("text/html;charset=UTF-8");
         try {
             response.getWriter().write(sb.toString());
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ex) {
+            logger.warn("renderView failed",ex);
         }
 
     }
