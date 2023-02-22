@@ -23,7 +23,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -187,8 +186,6 @@ Project Link: [https://github.com/acegroupteam/watchtower](https://github.com/ac
 [issues-url]: https://github.com/acegroupteam/watchtower/issues
 [license-shield]: https://img.shields.io/github/license/acegroupteam/watchtower.svg?style=for-the-badge
 [license-url]: https://github.com/acegroupteam/watchtower/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
 [maven]: https://img.shields.io/badge/maven-000000?style=for-the-badge&logo=maven&logoColor=white
 [maven-url]: https://maven.apache.org/
