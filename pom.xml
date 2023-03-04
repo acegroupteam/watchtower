@@ -4,70 +4,27 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.easy-profiler</groupId>
-    <artifactId>spring-boot-easy-profiler-starter</artifactId>
-    <version>1.0.1.RELEASE</version>
-    <packaging>jar</packaging>
+    <groupId>org.acegroup</groupId>
+    <artifactId>watchtower</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
 
-    <name>easy-profiler</name>
-    <url>https://github.com/hexiangtao/easy-profiler.git</url>
-    <description>一个简单的接口访问统计springboot插件</description>
-
+    <modules>
+        <module>legacy-easy-profiler</module>
+        <module>watchtower-apm-core</module>
+        <module>watchtower-apm-api</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
     </properties>
 
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <dependencies>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <version>2.1.5.RELEASE</version>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.1.4.RELEASE</version>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.8.0-beta2</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
+    <name>watchtower</name>
+    <url>https://github.com/acegroupteam/watchtower.git</url>
+    <description>watchtower</description>
 
     <profiles>
         <profile>
@@ -78,7 +35,6 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
-                        <version>3.2</version>
                         <configuration>
                             <source>${java.version}</source>
                             <target>${java.version}</target>
@@ -114,16 +70,16 @@
     <licenses>
         <license>
             <name>GNU GENERAL PUBLIC LICENSE, Version 3</name>
-            <url>https://github.com/hexiangtao/easy-profiler/LICENSE</url>
+            <url>https://github.com/acegroup/watchtower/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
-        <tag>master</tag>
-        <url>git@github.com:hexiangtao/easy-profiler.git</url>
-        <connection>scm:git:git@github.com:hexiangtao/easy-profiler.git</connection>
-        <developerConnection>scm:git@github.com:hexiangtao/easy-profiler.git</developerConnection>
+        <tag>dev</tag>
+        <url>git@github.com:acegroupteam/watchtower.git</url>
+        <connection>scm:git:git@github.com:acegroupteam/watchtower.git</connection>
+        <developerConnection>scm:git@github.com:acegroupteam/watchtower.git</developerConnection>
     </scm>
 
 
@@ -131,7 +87,7 @@
         <developer>
             <name>xiangtao He</name>
             <email>xiangtaohe@gmail.com</email>
-            <organization>none</organization>
+            <organization>acegroup</organization>
         </developer>
     </developers>
 </project>

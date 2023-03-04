@@ -1,0 +1,40 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "org.acegroup.watchtower.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties",
+      "name": "easy-profiler",
+      "type": "org.acegroup.watchtower.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties"
+    },
+    {
+      "sourceType": "org.acegroup.watchtower.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties",
+      "name": "easy-profiler.enableBasic",
+      "sourceMethod": "isEnableBasic()",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.acegroup.watchtower.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties",
+      "name": "easy-profiler.username",
+      "sourceMethod": "getUsername()",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.acegroup.watchtower.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties",
+      "name": "easy-profiler.password",
+      "sourceMethod": "getPassword()",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.acegroup.watchtower.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties",
+      "name": "easy-profiler.basePackage",
+      "sourceMethod": "getBasePackage()",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.acegroup.watchtower.easyprofiler.autoconfigure.EasyProfilerConfigurationProperties",
+      "name": "easy-profiler.excludeClass",
+      "sourceMethod": "getExcludeClass()",
+      "type": "java.lang.String"
+    }
+  ]
+}
