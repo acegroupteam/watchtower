@@ -2,8 +2,6 @@ package org.acegroup.watchtower.apm.impl.transaction;
 
 import lombok.Data;
 
-import java.io.Serializable;
-
 /**
  * 跨度(动态上下文) 描述计算机操作，跨度有一个名称，一个开始时间，一个持续时间，以及一组属性。
  * 标准操作是使用语义约定来描述的，但也有一些特定的应用属性，比如ProjectID,和AccountID,可以由应用开发者添加，
@@ -18,7 +16,7 @@ import java.io.Serializable;
  * @date 2023/3/11 18:51
  */
 @Data
-public class Span implements Serializable {
+public class Span implements DynamicContext {
 
 
     /***
